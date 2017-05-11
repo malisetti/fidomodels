@@ -71,8 +71,9 @@ type Authenticator struct {
 }
 
 type Context struct {
-	Transaction string `json:"transaction,omitempty" bson:"transaction"`
-	UserName    string `json:"userName,omitempty" bson:"userName"`
+	Transaction string                 `json:"transaction,omitempty" bson:"transaction"`
+	UserName    string                 `json:"userName,omitempty" bson:"userName"`
+	Extras      map[string]interface{} `json:"extras,omitempty" bson:"-"`
 }
 
 type UAFRequest struct {
